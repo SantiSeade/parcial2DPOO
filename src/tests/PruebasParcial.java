@@ -16,7 +16,7 @@ public class PruebasParcial {
 	private Parcial parcial;
 	
 	private List<Double> listaRespuestasUnaSolucion = Arrays.asList(0.0);
-	private List<Double> listaRespuestaDosSoluciones = Arrays.asList(-1.0, 0.0);
+	private List<Double> listaRespuestaDosSoluciones = Arrays.asList(0.0, -1.0);
 	
 	@BeforeEach
 	public void setUp() {
@@ -41,10 +41,7 @@ public class PruebasParcial {
 	@Test
 	public void dosSolucionesTest() {
 		List<Double> listaSol = parcial.encontrarRaicesEcuacionSegundoOrden(1, 1, 0);
-		
-		System.out.println(listaSol.get(0));
-		System.out.println(listaSol.get(1));
-		
+
 		assertTrue(listaSol.get(0) == this.listaRespuestaDosSoluciones.get(0));
 		
 	}
